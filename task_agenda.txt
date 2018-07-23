@@ -1,0 +1,9 @@
+task is to write a simple web service which can parse Cloudtrail logs and give recommendations for better following the least privilege principle on AWS. You should use sanitized Cloudtrail logs (attached).
+
+Required output:
+
+    A simple webservice (without UI) parsing a CloudTrail gzipped file (uploaded in POST body)
+
+    Listing all IAM users found in the log
+
+    For each user showing the AWS permissions that were actually used based on the CloudTrail logs and recommend an IAM policy which would grant permission only to these “needed permissions”
