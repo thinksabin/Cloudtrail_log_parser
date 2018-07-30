@@ -9,15 +9,15 @@ import json
 class CloudTrailLogParser(object):
 
     #loads the json file and returns
-    def getCompleteJson(self):
-        filename = 'sanitized_cloudtrail_example.json'
-        try:
-            with open(filename, 'r') as json_file:
-                datastore = json.load(json_file)
-            return datastore
-
-        except:
-            print('error loading the json file')
+    # def getCompleteJson(self):
+    #     filename = 'sanitized_cloudtrail_example.json'
+    #     try:
+    #         with open(filename, 'r') as json_file:
+    #             datastore = json.load(json_file)
+    #         return datastore
+    #
+    #     except:
+    #         print('error loading the json file')
 
     # list all the iam users in the json file
     def getIamUser(self, datastore):
@@ -54,12 +54,12 @@ class CloudTrailLogParser(object):
 
         return user_events_dictionary
 
-
-if __name__ == '__main__':
-    cloudtrail_lp= CloudTrailLogParser()
-    datastore = cloudtrail_lp.getCompleteJson()
-    userlist = cloudtrail_lp.getIamUser(datastore)
-    print(userlist)
-
-    user_events = cloudtrail_lp.getUserEventTriggered(datastore, userlist)
-    print(user_events)
+#
+# if __name__ == '__main__':
+#     cloudtrail_lp= CloudTrailLogParser()
+#     datastore = cloudtrail_lp.getCompleteJson()
+#     userlist = cloudtrail_lp.getIamUser(datastore)
+#     print(userlist)
+#
+#     user_events = cloudtrail_lp.getUserEventTriggered(datastore, userlist)
+#     print(user_events)
