@@ -1,15 +1,19 @@
 Cloudtrail parser.
 
-sample cloudtrail log alrady defined in the source hardcoded. Sample logs are also there.
 
 web service run in 5002 port; localhost.
 
-available services:
-/iamusers   = list all the iam users in the json file. return list.
-/usertriggeredevents = list iam users and the unique events they triggered according to the cloudtrail log. returns dictionary.
+can be run with the python already in the repo:
+
+$bin/python3 myapp/webapi.py 
 
 
 
-use the virtualenv in the repo
+Usage with Postman:
+parameters for post request: 
 
-Nothing fancy here :)
+file <gz file>
+output <listusers / userevents>
+
+
+
